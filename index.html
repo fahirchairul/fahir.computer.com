@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fahir.computer | High Performance Computing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .request-card {
+            background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <nav class="fixed w-full z-50 glass-nav border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-extrabold tracking-tighter text-blue-600">fahir<span class="text-gray-900">.computer</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-blue-600 transition">Beranda</a>
+                    <a href="#produk" class="hover:text-blue-600 transition">Katalog</a>
+                    <a href="#request-pc" class="text-blue-600 font-bold">Rakit PC Custom</a>
+                    <a href="https://wa.me/6281572100703" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-200">Konsultasi Gratis</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight">
+                    Custom PC <br><span class="text-blue-600">Tanpa Ribet.</span>
+                </h1>
+                <p class="text-gray-600 text-lg mb-8 md:pr-20">
+                    Sebutkan budget dan kebutuhan Anda, kami akan meracik spesifikasi PC terbaik dengan performa maksimal.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="#request-pc" class="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition shadow-xl shadow-blue-200 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-tools"></i> Request Rakit PC
+                    </a>
+                    <a href="#produk" class="border border-gray-300 px-8 py-4 rounded-2xl font-bold hover:bg-white transition flex items-center justify-center">Lihat Katalog</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://storage-asset.msi.com/global/picture/news/2025/mb/x870e-20251103-1.jpg" class="rounded-[2.5rem] shadow-2xl w-full border-8 border-white">
+            </div>
+        </div>
+    </section>
+
+    <section id="request-pc" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="request-card rounded-[3rem] p-8 md:p-12 text-white shadow-2xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Minta Penawaran Rakit PC 🖥️</h2>
+                    <p class="text-blue-100 mb-8">Isi formulir singkat di bawah ini, teknisi kami akan membalas via WhatsApp.</p>
+                    
+                    <form id="pcForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-blue-100">Nama Lengkap</label>
+                                <input type="text" id="nama" class="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-blue-200 focus:outline-none focus:ring-2 focus:ring-white" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-blue-100">Anggaran (Budget)</label>
+                                <select id="budget" class="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white [&>option]:text-gray-900">
+                                    <option value="Di bawah 5 Juta">Di bawah 5 Juta</option>
+                                    <option value="5 - 10 Juta">5 - 10 Juta</option>
+                                    <option value="10 - 20 Juta">10 - 20 Juta</option>
+                                    <option value="20 Juta ke atas">20 Juta ke atas (High-End)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-blue-100">Kebutuhan Utama</label>
+                            <select id="kebutuhan" class="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white [&>option]:text-gray-900">
+                                <option value="Gaming & Streaming">Gaming & Streaming</option>
+                                <option value="Video Editing & Rendering">Video Editing & Rendering</option>
+                                <option value="Office & Sekolah">Kebutuhan Kantor / Sekolah</option>
+                                <option value="AI & Programming">AI / Data Science / Programming</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-blue-100">Catatan Tambahan (Opsional)</label>
+                            <textarea id="pesan" class="w-full px-5 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-blue-200 focus:outline-none focus:ring-2 focus:ring-white" rows="3" placeholder="Contoh: Harus pakai prosesor Intel, casing warna putih, dll."></textarea>
+                        </div>
+                        
+                        <button type="button" onclick="sendToWA()" class="w-full py-4 bg-white text-blue-600 font-extrabold rounded-xl hover:bg-blue-50 transition-all transform active:scale-95 flex items-center justify-center gap-3 text-lg">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i> Kirim Request ke WhatsApp
+                        </button>
+                    </form>
+                </div>
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produk" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-extrabold mb-12">Produk Terlaris</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100">
+                    <img src="https://www.intel.co.id/content/dam/www/central-libraries/us/en/images/2023-01/s9-u05-26-install-motherboard-original-rwd.jpg.rendition.intel.web.720.405.jpg" class="w-full h-48 object-cover rounded-2xl mb-4">
+                    <span class="text-blue-600 font-bold text-xs uppercase">Custom Build</span>
+                    <h3 class="text-xl font-bold mt-1">Starter Gaming PC</h3>
+                    <p class="text-gray-500 text-sm mb-4">Ideal untuk e-Sports & tugas sekolah.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-extrabold">Rp 6.499.000</span>
+                        <a href="#request-pc" class="p-3 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100">
+                    <img src="https://orbit.co.id/assets/uploads/2023/10/06980a94-d470-4ab6-bf55-15574267f644.jpg" class="w-full h-48 object-cover rounded-2xl mb-4">
+                    <span class="text-blue-600 font-bold text-xs uppercase">Peripheral</span>
+                    <h3 class="text-xl font-bold mt-1">Monitor MSI 24" 100Hz</h3>
+                    <p class="text-gray-500 text-sm mb-4">Warna akurat, bezel tipis.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-extrabold">Rp 1.500.000</span>
+                        <a href="https://wa.me/6281572100703" class="p-3 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-3xl p-6 border border-gray-100">
+                    <img src="https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/fedaf11416c44e8aabbf60b3b30bdc7e~tplv-aphluv4xwc-resize-jpeg:800:800.jpeg?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" class="w-full h-48 object-cover rounded-2xl mb-4">
+                    <span class="text-blue-600 font-bold text-xs uppercase">Peripheral</span>
+                    <h3 class="text-xl font-bold mt-1">Mechanical keyboard zifriend</h3>
+                    <p class="text-gray-500 text-sm mb-4">Compact & tactile feeling.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-extrabold">Rp 450.000</span>
+                        <a href="https://wa.me/6281572100703" class="p-3 bg-blue-100 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-4 text-center">
+        <p class="mb-4">&copy; 2025 fahir.computer. All rights reserved.</p>
+        <div class="flex justify-center space-x-4 text-2xl">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/6281572100703" class="text-gray-400 hover:text-white"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function sendToWA() {
+            const nama = document.getElementById('nama').value;
+            const budget = document.getElementById('budget').value;
+            const kebutuhan = document.getElementById('kebutuhan').value;
+            const pesan = document.getElementById('pesan').value;
+            
+            if(nama === "") {
+                alert("Silakan masukkan nama Anda.");
+                return;
+            }
+
+            const noWA = "6281572100703";
+            const teks = `Halo fahir.computer!%0A%0ASaya ingin request rakit PC dengan detail:%0A- *Nama:* ${nama}%0A- *Budget:* ${budget}%0A- *Kebutuhan:* ${kebutuhan}%0A- *Catatan:* ${pesan}%0A%0AMohon bantuan rekomendasinya, terima kasih!`;
+            
+            window.open(`https://wa.me/${noWA}?text=${teks}`, '_blank');
+        }
+    </script>
